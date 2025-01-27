@@ -1,0 +1,13 @@
+# Establece index.html como archivo de inicio
+DirectoryIndex index.html
+
+# Habilitar compresión para mejorar el rendimiento
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript
+</IfModule>
+
+# Evitar el listado de directorios
+Options -Indexes
+
+# Habilitar el manejo de errores personalizados (opcional)
+ErrorDocument 404 /index.html
